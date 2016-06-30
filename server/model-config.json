@@ -14,7 +14,7 @@
     ]
   },
   "talk": {
-    "dataSource": null,
+    "dataSource": "devDB",
     "public": true
   }
 }
