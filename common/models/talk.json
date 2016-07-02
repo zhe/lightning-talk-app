@@ -7,16 +7,13 @@
   },
   "properties": {
     "title": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "description": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "username": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "rating": {
       "type": "number",
