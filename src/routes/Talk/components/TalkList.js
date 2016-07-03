@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import classes from './TalkList.scss'
 
 class TalkList extends Component {
   constructor (props) {
@@ -29,33 +28,38 @@ class TalkList extends Component {
               <p className='lead'>
                   {talk.description}
               </p>
-              <div className="row">
-                <div className="col-xs-6 text-right">
+              <div className='row'>
+                <div className='col-xs-6 text-right'>
                   <strong>Speaker</strong>
                 </div>
-                <div className="col-xs-6 text-left">
+                <div className='col-xs-6 text-left'>
                   {talk.username}
                 </div>
               </div>
-              <div className="row">
-                <div className="col-xs-6 text-right">
+              <div className='row'>
+                <div className='col-xs-6 text-right'>
                   <p><strong>Rating</strong></p>
                 </div>
-                <div className="col-xs-6 text-left">
+                <div className='col-xs-6 text-left'>
                   <span className='text-success'>{talk.rating}</span>
                 </div>
               </div>
               <div className='btn-group'>
-                <a className='btn btn-primary' title="Like" onClick={()=> this.handleVote('up', talk)}>
+                <a className='btn btn-primary' title='Like' onClick={() => this.handleVote('up', talk)}>
                   <span className='glyphicon glyphicon-thumbs-up' ariaHidden='true'></span>
                 </a>
-                <a className='btn btn-default' title="Dislike" onClick={()=> this.handleVote('down', talk)}>
+                <a className='btn btn-default' title='Dislike' onClick={() => this.handleVote('down', talk)}>
                   <span className='glyphicon glyphicon-thumbs-down' ariaHidden='true'></span>
                 </a>
               </div>
               <hr />
            </div>
   }
+}
+
+TalkList.propTypes = {
+  onVote: React.PropTypes.func,
+  talks: React.PropTypes.array
 }
 
 export default TalkList

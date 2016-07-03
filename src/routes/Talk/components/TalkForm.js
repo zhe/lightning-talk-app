@@ -14,9 +14,9 @@ class TalkForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const talk = {
-        title: this.refs.title.value.trim(),
-        description: this.refs.description.value.trim(),
-        username: this.refs.username.value.trim()
+      title: this.refs.title.value.trim(),
+      description: this.refs.description.value.trim(),
+      username: this.refs.username.value.trim()
     }
     this.props.onFormSubmit(talk)
     this.refs.title.value = ''
@@ -29,11 +29,9 @@ class TalkForm extends Component {
      and their length are valid */
   handleFormValidate = (e) => {
     const title = this.refs.title.value.trim()
-    const description = this.refs.description.value.trim()
     const username = this.refs.username.value.trim()
 
-    if (title.length > 0 && title.length < 30
-        && username.length > 0 && username.length < 20 ) {
+    if (title.length > 0 && title.length < 30 && username.length > 0 && username.length < 20) {
       this.setState({isFormValid: true})
     }
   }
@@ -43,7 +41,7 @@ class TalkForm extends Component {
       <form onChange={this.handleFormValidate} onSubmit={this.handleSubmit}>
         <h4>Submit a lightning talk</h4>
         <div className='form-group'>
-          <label for='inputTitle'>
+          <label htmlFor='inputTitle'>
             Title *
           </label>
           <input
@@ -54,7 +52,7 @@ class TalkForm extends Component {
             placeholder='Title * Required' />
         </div>
         <div className='form-group'>
-          <label for='inputDescription'>
+          <label htmlFor='inputDescription'>
             Description
           </label>
           <input
@@ -65,7 +63,7 @@ class TalkForm extends Component {
             placeholder='Description' />
         </div>
         <div className='form-group'>
-          <label for='inputUsername'>
+          <label htmlFor='inputUsername'>
             Username *
           </label>
           <input
@@ -81,6 +79,10 @@ class TalkForm extends Component {
       </form>
     )
   }
+}
+
+TalkForm.propTypes = {
+  onFormSubmit: React.PropTypes.func
 }
 
 export default TalkForm
