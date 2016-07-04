@@ -1,11 +1,11 @@
 module.exports = {
-  prodDB: {
+  talkDB: {
     host: process.env.MYSQL_PORT_3306_TCP_ADDR,
     port: process.env.MYSQL_PORT_3306_TCP_PORT,
     url: '',
     database: process.env.MYSQL_INSTANCE_NAME,
     password: process.env.MYSQL_PASSWORD,
-    name: 'prodDB',
+    name: 'talkDB',
     user: process.env.MYSQL_USERNAME,
     connector: 'mysql'
   }
