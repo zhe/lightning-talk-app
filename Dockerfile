@@ -11,4 +11,4 @@ RUN npm install
 
 EXPOSE 3001
 
-CMD ['export NODE_EVN=production', 'node .']
+CMD ['node', 'server/server.js']

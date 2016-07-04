@@ -1,5 +1,5 @@
 module.exports = function (app) {
-  app.dataSources.devDB.automigrate('talk', function (err) {
+  app.dataSources.talkDB.automigrate('talk', function (err) {
     if (err) throw err
 
     app.models.talk.create([
